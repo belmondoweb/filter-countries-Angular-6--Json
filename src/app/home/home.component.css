@@ -1,0 +1,18 @@
+
+img {
+    max-width: 100%;
+    margin: 0 auto;
+}
+.card-body {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1.25rem;
+    text-align: center;
+    }
+    .col-centered{
+        margin: 0 auto;
+        float: none;
+    }
+    input {
+        margin: 0 auto;
+    }

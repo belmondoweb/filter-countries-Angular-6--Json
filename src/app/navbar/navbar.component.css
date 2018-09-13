@@ -1,0 +1,16 @@
+.nav-item a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+.nav-item.active a{
+    background-color: #4CAF50;
+    color: white;
+}
+.nav-item a:hover {
+    background-color: #ddd;
+    color: black;
+}

@@ -1,0 +1,43 @@
+<div class="position-relative container">
+
+    <div class="row justify-content-center">
+      <div class="card mt-sm-3 col-md-8 col-xl-9">
+        <div class="card-body center-block row justify-content-center">
+          <h3 class="mb-9">Welcome to Countries Directory</h3>
+          <div class="form-label" *ngIf="searchTerm"><strong>For:</strong>
+            {{ searchTerm }}
+          </div>
+          
+           <input type="text" class="list-group-item list-group-item-action flex-column align-items-start" placeholder="Search By Countrie or Capital"
+                    style="width:300px" [(ngModel)]="searchTerm" />
+                     <!-- <img class="mr-2 rounded align-self-center img-fluid" src="https://cdn-a.william-reed.com/var/wrbm_gb_food_pharma/storage/images/5/9/8/9/1079895-1-eng-GB/Space-might-taste-like-raspberries-Grey-Goose-partners-with-Virgin-Galactic-spaceflight_wrbm_large.jpg"> -->
+        </div>
+     </div>
+    </div> 
+
+<div class="position-absolute container flex-column" style="left: 0; z-index:10">
+    <div class="row justify-content-center">
+      <div class="col-sm-10 col-md-8 col-lg-6 col-xl-9">
+      
+          <a class="list-group-item list-group-item-action flex-column align-items-start" *ngFor="let x of countries | search: searchTerm">
+            <div class="container mt-6">
+                <div class="flex-row justify-content-center">
+                  <div class="col-sm-3 col-lg-12">
+                    <img class="img-fluid rounded" src="{{x.flag}}">
+                  </div>
+                  <div class="row mtext">
+                  <div class="col-sm-6 col-lg-12">
+                      
+                        <h2 class="mt-0">{{x.name}}-{{x.capital}}</h2>
+                        <h4 class="mt-0">Population-{{x.population}}--{{x.nativeName}}</h4>
+                    </div>
+                   </div> 
+                
+                </div>
+              </div><!-- <app-countries [capital]="capital"></app-countries> -->
+          </a><!-- link -->
+       
+      </div><!-- col -->
+    </div><!-- row -->
+  </div><!-- container -->
+  </div>
